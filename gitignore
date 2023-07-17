@@ -1,4 +1,11 @@
+.ipynb_checkpoints
 __pycache__/
+
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
 eggs/
 .eggs/
 lib/
@@ -12,7 +19,6 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
-pip-log.txt
 
 htmlcov/
 .tox/
@@ -27,6 +33,3 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 cover/
-
-# Jupyter Notebook
-.ipynb_checkpoints
