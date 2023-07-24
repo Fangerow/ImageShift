@@ -1,6 +1,12 @@
+import sys
+import os
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '.')))
+
 import torch
 from pytorch_lightning import LightningModule, Trainer
 from src.models.STN_model import Net
+from utils.loss_functions import WGLoss
 from config import cfg
 
 
@@ -8,7 +14,7 @@ class ShiftNetModule(LightningModule):
     def __init__(self):
         super(ShiftNetModule, self).__init__()
         self.model = Net()
-        self.criterion = torch.nn.MSELoss()
+        self.criterion = WGLoss()
 
     def forward(self, x):
         return self.model(x)
